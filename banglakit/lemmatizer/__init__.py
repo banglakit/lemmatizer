@@ -13,7 +13,7 @@ with open(path) as rules_file:
 
 def remove_inflection(word, pos=None):
     for suffix, replacement in RULES[pos]:
-        if word.endswith(suffix):
+        if word.endswith(suffix) and len(suffix) < len(word):
             return word[:-len(suffix)]
     return word
 
