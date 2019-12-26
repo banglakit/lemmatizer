@@ -1,5 +1,7 @@
 # BanglaKit Lemmatizer
 
+![Build Badge](https://github.com/banglakit/lemmatizer/workflows/banglakit-lemmatizer/badge.svg)
+
 A rule-based lemmatizer for Bengali / Bangla based written in Python. Under active development.
 
 ## Installation
