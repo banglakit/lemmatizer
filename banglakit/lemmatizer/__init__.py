@@ -6,13 +6,13 @@ POS_PROPN = 'proper_noun'
 POS_VERB = 'verb'
 
 rules_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data', 'bn_lemma_rules.json')
-word_list_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data', 'bn_lemma_rules.json')
+word_list_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data', 'bn_words.json')
 
 with open(rules_path) as rules_file:
     RULES = json.load(rules_file)
 
-with open(word_list_path) as rules_file:
-    WORDS = set(json.load(rules_file))
+with open(word_list_path) as word_list_file:
+    WORDS = set(json.load(word_list_file))
 
 
 def remove_inflection(word, pos=None):
