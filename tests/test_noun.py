@@ -35,3 +35,7 @@ def test_does_not_lemmatize_base_noun(base):
 
 def test_return_whole_when_proper_noun():
     assert lemmatizer.get('বাংলাদেশ', pos=lemmatizer.POS_PROPN) == 'বাংলাদেশ'
+
+
+def test_dictionary_word():
+    assert lemmatizer.get('অন্তর্জলি', pos=lemmatizer.POS_NOUN) == 'অন্তর্জলি'
