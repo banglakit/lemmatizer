@@ -8,5 +8,6 @@ setup(
     license='MIT',
     author='The BanglaKit Project and Contributors',
     author_email='hi@banglakit.org',
-    description='A rule-based Lemmatizer for Bengali'
+    description='A rule-based Lemmatizer for Bengali',
+    package_data={'banglakit.lemmatizer': ['data/*.json']}
 )
