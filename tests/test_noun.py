@@ -40,3 +40,10 @@ def test_return_whole_when_proper_noun():
 @pytest.mark.parametrize('word', ['অন্তর্জলি', 'চেহারা', 'আদুরে'])
 def test_dictionary_word(word):
     assert lemmatizer.get(word, pos=lemmatizer.POS_NOUN) == word
+
+
+@pytest.mark.parametrize('inflected,lemmatized', [
+    ('গিয়েছিল', 'যাওয়া'),
+])
+def test_lookup_table_used(inflected, lemmatized):
+    assert lemmatizer.get(inflected, pos=lemmatizer.POS_NOUN) == lemmatized
