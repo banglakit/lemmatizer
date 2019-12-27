@@ -11,6 +11,7 @@ DEFAULT_DATA_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'da
 RULES_FILE_PATH = os.path.join(DEFAULT_DATA_DIR, 'bn_lemma_rules.json')
 WORD_LIST_PATH = os.path.join(DEFAULT_DATA_DIR, 'bn_words.json')
 LOOKUP_TABLE_PATH = os.path.join(DEFAULT_DATA_DIR, 'bn_lemma_lookup.json')
+LOOKUP_GENERATED_PATH = os.path.join(DEFAULT_DATA_DIR, 'bn_lemma_lookup_generated.json')
 PRONOUN_LIST_PATH = os.path.join(DEFAULT_DATA_DIR, 'bn_pronoun_list.json')
 
 
@@ -23,6 +24,7 @@ class BengaliLemmatizer:
 
         if not lemma_lookup:
             lemma_lookup = self._load_map(LOOKUP_TABLE_PATH)
+            lemma_lookup.update(self._load_map(LOOKUP_GENERATED_PATH))
 
         if not pronoun_set:
             pronoun_set = self._load_set(PRONOUN_LIST_PATH)
