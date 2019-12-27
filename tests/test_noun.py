@@ -23,7 +23,6 @@ def test_strips_plural_from_inflected_noun(inflected, lemmatized):
 
 
 @pytest.mark.parametrize('base,', [
-    'ছড়া',
     'কুল',
     'কুল',
     'রাজি',
