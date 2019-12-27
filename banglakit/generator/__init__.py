@@ -31,7 +31,9 @@ def generate_for(args, rules):
 
 def generate():
     d = {}
-    d.update(generate_for('কর গড় চর চড় ছড় ঝর নড় পর পড় ভর মর সর হাঁট কাট হাঁট ঘাট ছাট রাঁধ বাধ ছুট'.split(), [rule_1, rule_2]))
+    d.update(generate_for('কর গড় চর চড় ছড় ঝর নড় পর পড় ভর মর সর '
+                          'হাঁট কাট হাঁট ঘাট ছাট রাঁধ বাধ ছুট খেল '
+                          'মিল মেল চিন চেন'.split(), [rule_1, rule_2]))
     d.update(generate_for('দৌড় ঝিম ঘুম চাল থাম কাম ঠেক পিট কিল ঘুষ লাত্থ'.split(), [rule_2]))
 
     return d
