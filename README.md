@@ -16,11 +16,15 @@ $ pip install git+https://github.com/banglakit/lemmatizer.git#egg=banglakit-lemm
 
 ```python
 
-from banglakit import lemmatizer
+from banglakit import lemmatizer as lem
+from banglakit.lemmatizer import BengaliLemmatizer
 
-lemmatizer.get('বাংলাদেশের', pos=lemmatizer.POS_PROPN)
+
+lemmatizer = BengaliLemmatizer()
+
+lemmatizer.lemmatize('বাংলাদেশের', pos=lem.POS_PROPN)
 # বাংলাদেশ
 
-lemmatizer.get('বাংলাদেশের', pos='proper_noun')
+lemmatizer.lemmatize('বাংলাদেশের', pos='proper_noun')
 # বাংলাদেশ
 ```
