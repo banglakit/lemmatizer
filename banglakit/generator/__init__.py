@@ -1,7 +1,7 @@
 import itertools
 
 
-def rule_1(base: str, root: str):
+def rule_1(base: str, root: str = None):
     rules = ['{r0}বেন', '{r1}েছেন', '{r1}েছিস', '{r0}িস', '{r0}ছে', '{r0}তেন', '{r0}ছিল', '{r1}েছিলি', '{r1}েছ',
              '{r0}ছেন', '{r0}ছিলে', '{r0}ত', '{r0}লেন', '{r1}েছি', '{r0}তে', '{r0}ছিস', '{r0}েন', '{r0}তাম', '{r0}লি',
              '{r1}েছিলাম', '{r0}', '{r0}বে', '{r0}ব', '{r0}ল', '{r1}েছে', '{r0}ছি', '{r0}লে', '{r0}ি', '{r0}ছিলেন',
@@ -31,7 +31,7 @@ def generate_for(args, rules):
 
 def generate():
     d = {}
-    d.update(generate_for('কর গড় চর ছড় ঝর নড় পর পড় ভর মর সর হাঁট কাট হাঁট ঘাট ছাট'.split(), [rule_1, rule_2]))
-    d.update(generate_for('দৌড় ঝিম ঘুম চাল থাম কাম'.split(), [rule_2]))
+    d.update(generate_for('কর গড় চর চড় ছড় ঝর নড় পর পড় ভর মর সর হাঁট কাট হাঁট ঘাট ছাট রাঁধ বাধ ছুট'.split(), [rule_1, rule_2]))
+    d.update(generate_for('দৌড় ঝিম ঘুম চাল থাম কাম ঠেক পিট কিল ঘুষ লাত্থ'.split(), [rule_2]))
 
     return d
